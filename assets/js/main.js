@@ -15,9 +15,10 @@
 
   var SCRIPTS = [
     { label: "Latin",    text: "Charles Montluc-Giannopoulou", pool: "abcdefghijklmnopqrstuvwxyz", hold: 5200 },
-    { label: "Greek",    text: "Σαρλ Μονλύκ-Γιαννοπούλου",     pool: "αβγδεζηθικλμνξοπρστυφχψω",   hold: 3200 },
-    { label: "Cyrillic", text: "Шарль Монлюк-Яннопулу",        pool: "абвгдежзийклмнопрстуфхцчшщюя", hold: 3200 },
-    { label: "Katakana", text: "シャルル・モンリュック＝ヤノプール", pool: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン", hold: 3200 }
+    { label: "Greek",    text: "Σαρλ Μονλύκ-Γιαννόπουλος",     pool: "αβγδεζηθικλμνξοπρστυφχψω",   hold: 3200 },
+    { label: "Cyrillic", text: "Шарль Монлюк-Яннопулос",       pool: "абвгдежзийклмнопрстуфхцчшщюя", hold: 3200 },
+    { label: "Arabic",   text: "شارل مونلوك-يانوبولوس",         pool: "ابتثجحخدذرزسشصضطظعغفقكلمنهوي", hold: 3200, dir: "rtl" },
+    { label: "Katakana", text: "シャルル・モンリュック＝ヤノプロス", pool: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン", hold: 3200 }
   ];
 
   var nameEl = document.querySelector("[data-name]");
@@ -38,6 +39,7 @@
     var setMeta = function (idx) {
       labelEl.textContent = SCRIPTS[idx].label;
       nameEl.parentNode.setAttribute("data-script", SCRIPTS[idx].label);
+      nameEl.setAttribute("dir", SCRIPTS[idx].dir || "ltr");
       dots.forEach(function (d, i) { d.classList.toggle("on", i === idx); });
     };
 

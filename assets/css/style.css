@@ -217,11 +217,12 @@ img { max-width: 100%; display: block; }
   line-height: 1.02;
   letter-spacing: -.015em;
   margin: 0;
-  min-height: 2.04em; /* two lines reserved so script changes don't shift layout */
+  height: 2.04em; /* two lines reserved so script changes don't shift layout */
 }
 .name-line { display: inline; }
 .name-line .ch-scramble { color: var(--accent); }
 .name[data-script="Katakana"] .name-line { font-size: .7em; letter-spacing: .02em; }
+.name[data-script="Arabic"] .name-line { font-size: .8em; line-height: 1.22; }
 
 .script-caption {
   display: flex;
@@ -674,5 +675,5 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
   }
   .role-meta { flex-direction: row; gap: 12px; flex-wrap: wrap; }
   .footer-inner { flex-direction: column; gap: 4px; }
-  .name { min-height: 2.1em; }
+  .name { height: 2.1em; }
 }
