@@ -37,6 +37,7 @@
 
     var setMeta = function (idx) {
       labelEl.textContent = SCRIPTS[idx].label;
+      nameEl.parentNode.setAttribute("data-script", SCRIPTS[idx].label);
       dots.forEach(function (d, i) { d.classList.toggle("on", i === idx); });
     };
 

@@ -221,6 +221,7 @@ img { max-width: 100%; display: block; }
 }
 .name-line { display: inline; }
 .name-line .ch-scramble { color: var(--accent); }
+.name[data-script="Katakana"] .name-line { font-size: .7em; letter-spacing: .02em; }
 
 .script-caption {
   display: flex;
@@ -534,7 +535,7 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
   padding: 30px 28px;
 }
 .lyric p { margin: 0; }
-.lyric-src {
+.lyric .lyric-src {
   font-family: var(--font-display);
   font-size: clamp(30px, 3.6vw, 42px);
   line-height: 1.15;
@@ -673,5 +674,5 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
   }
   .role-meta { flex-direction: row; gap: 12px; flex-wrap: wrap; }
   .footer-inner { flex-direction: column; gap: 4px; }
-  .name { min-height: 3.06em; }
+  .name { min-height: 2.1em; }
 }
