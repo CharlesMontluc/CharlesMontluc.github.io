@@ -420,11 +420,13 @@ h3 { font-weight: 600; letter-spacing: -.01em; }
 .role-body > ul:not(.tags) li::before {
   content: "";
   position: absolute;
-  left: 2px;
-  top: .78em;
-  width: 9px;
-  height: 1px;
-  background: var(--muted);
+  left: 4px;
+  top: .68em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .7;
 }
 
 .tags {
