@@ -195,7 +195,6 @@ img { max-width: 100%; display: block; }
 .section-num,
 .project-kicker,
 .role-date,
-.script-caption,
 .contact-key,
 .beyond-key,
 .status {
@@ -217,32 +216,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.02;
   letter-spacing: -.015em;
   margin: 0;
-  height: 2.04em; /* two lines reserved so script changes don't shift layout */
 }
-.name-line { display: inline; }
-.name-line .ch-scramble { color: var(--accent); }
-.name[data-script="Katakana"] .name-line { font-size: .7em; letter-spacing: .02em; }
-.name[data-script="Arabic"] .name-line { font-size: .8em; line-height: 1.22; }
-
-.script-caption {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: var(--muted);
-  margin: 18px 0 0;
-  min-height: 20px;
-}
-.script-label { min-width: 7.5em; }
-.script-dots { display: inline-flex; gap: 6px; }
-.script-dots i {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--line-strong);
-  transition: background-color .3s, transform .3s var(--ease);
-}
-.script-dots i.on { background: var(--accent); transform: scale(1.25); }
-
 .lede {
   font-size: clamp(18px, 1.8vw, 20.5px);
   line-height: 1.6;
@@ -390,35 +364,18 @@ h3 { font-weight: 600; letter-spacing: -.01em; }
 /* about */
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  gap: 56px;
+  max-width: 760px;
 }
 .prose p { margin: 0 0 1.1em; color: var(--text-soft); }
 .prose strong { color: var(--text); font-weight: 500; }
 
-.facts {
-  margin: 0;
-  display: grid;
-  gap: 0;
-  align-content: start;
-  border-top: 1px solid var(--line);
-}
-.facts div {
-  display: grid;
-  grid-template-columns: 7.2em 1fr;
-  gap: 16px;
-  align-items: baseline;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-}
-.facts dt {
-  font-family: var(--font-display);
-  font-size: 30px;
-  line-height: 1;
-  color: var(--text);
-}
-.facts dt small { font-size: .55em; color: var(--muted); }
-.facts dd { margin: 0; font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+
+/* coursework in education */
+.courses { margin: 22px 0 0; display: grid; gap: 12px; }
+.courses div { display: grid; grid-template-columns: 170px 1fr; gap: 20px; }
+.courses dt { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .04em; color: var(--muted); padding-top: 2px; }
+.courses dd { margin: 0; color: var(--text-soft); font-size: 15px; }
+@media (max-width: 720px) { .courses div { grid-template-columns: 1fr; gap: 2px; } }
 
 /* timeline (experience + education) */
 .timeline { list-style: none; margin: 0; padding: 0; }
@@ -659,7 +616,6 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
   .monogram { font-size: 56px; }
   .portrait figcaption { display: none; }
 
-  .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .projects { grid-template-columns: 1fr; }
   .project-feature { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -675,7 +631,6 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
   }
   .role-meta { flex-direction: row; gap: 12px; flex-wrap: wrap; }
   .footer-inner { flex-direction: column; gap: 4px; }
-  .name { height: 2.1em; }
 }
 
 /* secondary links inside a project card (sit above the card-wide link) */
