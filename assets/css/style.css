@@ -549,7 +549,8 @@ a:hover .arrow, .project:hover .arrow { transform: translate(2px, -2px); color: 
 .chip svg[fill="none"] { fill: none; stroke: var(--brand, currentColor); }
 [data-theme="dark"] .chip-dark svg,
 [data-theme="light"] .chip-light svg { fill: var(--text); }
-.chip img { width: 18px; height: auto; border-radius: 2px; box-shadow: 0 0 0 1px var(--line); }
+.chip img.chip-logo { width: 15px; height: 15px; border-radius: 0; box-shadow: none; }
+.chip img:not(.chip-logo) { width: 18px; height: auto; border-radius: 2px; box-shadow: 0 0 0 1px var(--line); }
 .chip small { color: var(--muted); font-size: 12px; }
 
 .subhead {
