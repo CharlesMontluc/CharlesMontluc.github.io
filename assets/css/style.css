@@ -284,6 +284,19 @@ img { max-width: 100%; display: block; }
   100% { transform: scale(1.8); opacity: 0; }
 }
 
+/* schools under the intro */
+.schools { display: flex; align-items: center; gap: 22px; margin-top: 26px; flex-wrap: wrap; }
+.schools-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.schools ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 26px; }
+.schools img {
+  height: 44px;
+  width: auto;
+  opacity: .92;
+  transition: opacity .25s, transform .3s var(--ease);
+}
+.schools li:hover img { opacity: 1; transform: translateY(-1px); }
+[data-theme="dark"] .logo-light, [data-theme="light"] .logo-dark { display: none; }
+
 /* portrait */
 .portrait { margin: 0; }
 .portrait-frame {
@@ -395,6 +408,8 @@ h3 { font-weight: 600; letter-spacing: -.01em; }
 .role-date { color: var(--text-soft); }
 .role-place { font-size: 14px; color: var(--muted); }
 .role-body h3 { font-size: 21px; margin: 0; }
+.school-name { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.school-name img { width: 26px; height: 26px; object-fit: contain; }
 .role-title { margin: 2px 0 14px; color: var(--accent); font-size: 15.5px; }
 .role-body > ul:not(.tags) {
   margin: 0;
